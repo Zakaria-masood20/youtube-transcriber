@@ -1,0 +1,30 @@
+{
+  "name": "youtube-video-transcription",
+  "version": "1.0.0",
+  "description": "Download and transcribe YouTube videos using Azure Speech Services",
+  "main": "src/ytvid.ts",
+  "scripts": {
+    "download": "ts-node src/yt-vid-to-audio.ts",
+    "transcribe": "ts-node src/ytvid.ts",
+    "build": "tsc",
+    "dev": "ts-node"
+  },
+  "keywords": [
+    "youtube",
+    "transcription",
+    "azure",
+    "speech-to-text",
+    "audio"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "microsoft-cognitiveservices-speech-sdk": "^1.42.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
+  }
+}

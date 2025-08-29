@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",                   // Specifies the JavaScript version output
+    "module": "commonjs",              // Module system
+    "strict": true,                    // Enable strict type-checking options
+    "esModuleInterop": true,           // Allows default imports from CommonJS modules
+    "outDir": "./dist",                // Output directory for compiled files
+    "rootDir": "./src",                 // Root directory of source files
+    "lib": ["es2018", "dom"],
+    "moduleResolution": "node",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],             // Files to include in the compilation
+  "exclude": ["node_modules"]          // Exclude certain directories
+}
