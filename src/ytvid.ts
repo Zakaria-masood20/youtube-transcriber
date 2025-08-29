@@ -84,8 +84,9 @@ const processYouTubeUrls = async () => {
 
       const outputTemplate = path.join(videoOutputDir, "%(title)s.%(ext)s");
 
-      // yt-dlp command to download audio
-      const command = `yt-dlp --extract-audio --audio-format mp3 --output "${outputTemplate}" "${videoUrl}"`;
+      // yt-dlp command to download audio with additional options
+      const cleanUrl = videoUrl.replace(/\\/g, ''); // Remove any backslashes
+      const command = `yt-dlp --extract-audio --audio-format mp3 --no-check-certificate --output "${outputTemplate}" "${cleanUrl}"`;
 
       await new Promise<void>((resolve, reject) => {
         exec(command, (error, stdout, stderr) => {
