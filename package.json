@@ -10,7 +10,11 @@
     "transcribe:cli": "ts-node src/cli.ts transcribe",
     "validate": "ts-node src/cli.ts validate",
     "build": "tsc",
-    "dev": "ts-node"
+    "dev": "ts-node",
+    "web:dev": "cd web && npm run dev",
+    "web:build": "cd web && npm run build",
+    "web:start": "cd web && npm run start",
+    "web:install": "cd web && npm install"
   },
   "keywords": [
     "youtube",
